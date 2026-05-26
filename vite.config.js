@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Word_guessing_game/',
+  base: process.env.GITHUB_ACTIONS ? '/Word_guessing_game/' : '/',
 })
